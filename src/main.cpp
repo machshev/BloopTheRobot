@@ -1,7 +1,10 @@
 #include <Arduino.h>
 #include <Tone.h>
 #include <LED3.h>
+#include <Remote.h>
+#include <IRremote.h>
 
+const uint8_t RECV_PIN = 2;
 const uint8_t buzzer = 5;
 
 struct LED3 chest_1 = {13, A0, 11};
@@ -10,18 +13,36 @@ struct LED3 chest_3 = {4, A4, A5};
 struct LED3 chest_4 = {8, 7, 6};
 struct LED3 eyes = {12, 10, 9};
 
-void setup_leds(){
+IRrecv irrecv(RECV_PIN);
+decode_results results;
+
+
+void setup() {
   setup_led(chest_1);
   setup_led(chest_2);
   setup_led(chest_3);
   setup_led(chest_4);
   setup_led(eyes);
-}
 
-void setup() {
-  // put your setup code here, to run once:
+  irrecv.enableIRIn();
+  irrecv.blink13(false);
 }
 
 void loop() {
-  play_tune_aha_take_on_me(buzzer);
+  if (irrecv.decode(&results)){
+    /*if (results.value != 0xFFFFFFFF){
+       Serial.println(results.value, HEX);
+    }*/
+
+    if (results.value == IRC_DIY1){
+      play_tune_aha_take_on_me(buzzer);
+    }
+
+    irrecv.resume();
+  }
+  //cycle_led(chest_1);
+  //cycle_led(chest_2);
+  //cycle_led(chest_3);
+  //cycle_led(chest_4);
+  cycle_led_pwm(eyes);
 }
