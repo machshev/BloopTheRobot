@@ -8,9 +8,10 @@
             "includePath": [
                 "/home/david/base/PlatformIO/Projects/BloopTheRobot/include",
                 "/home/david/base/PlatformIO/Projects/BloopTheRobot/src",
+                "/home/david/base/PlatformIO/Projects/BloopTheRobot/lib/Tone",
                 "/home/david/.platformio/packages/framework-arduino-avr/cores/arduino",
                 "/home/david/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
-                "/home/david/base/PlatformIO/Projects/BloopTheRobot/lib/Tone",
+                "/home/david/base/PlatformIO/Projects/BloopTheRobot/lib/LED3",
                 "/home/david/.platformio/lib/CAN_ID2055/src",
                 "/home/david/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                 "/home/david/.platformio/packages/framework-arduino-avr/libraries/HID/src",
@@ -25,9 +26,10 @@
                 "path": [
                     "/home/david/base/PlatformIO/Projects/BloopTheRobot/include",
                     "/home/david/base/PlatformIO/Projects/BloopTheRobot/src",
+                    "/home/david/base/PlatformIO/Projects/BloopTheRobot/lib/Tone",
                     "/home/david/.platformio/packages/framework-arduino-avr/cores/arduino",
                     "/home/david/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
-                    "/home/david/base/PlatformIO/Projects/BloopTheRobot/lib/Tone",
+                    "/home/david/base/PlatformIO/Projects/BloopTheRobot/lib/LED3",
                     "/home/david/.platformio/lib/CAN_ID2055/src",
                     "/home/david/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                     "/home/david/.platformio/packages/framework-arduino-avr/libraries/HID/src",
